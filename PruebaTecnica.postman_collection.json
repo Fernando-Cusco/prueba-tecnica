@@ -1,0 +1,935 @@
+{
+	"info": {
+		"_postman_id": "52c7dc7e-c244-467d-be05-ac809a37d6b1",
+		"name": "PruebaTecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27524971"
+	},
+	"item": [
+		{
+			"name": "microservice-account",
+			"item": [
+				{
+					"name": "Movement By id and Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movimientos/2/2025-03-08",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"2",
+								"2025-03-08"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find By Date",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/movimientos/1/2025-03-08",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"movimientos",
+										"1",
+										"2025-03-08"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Mar 2025 16:57:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Movements retrieved successfully\",\n    \"code\": \"000\",\n    \"httpStatus\": 200,\n    \"data\": [\n        {\n            \"Tipo\": \"AHORROS\",\n            \"Fecha\": \"2025-03-09T16:56:53.701122\",\n            \"Movimiento\": 2,\n            \"Saldo_Disponible\": 16,\n            \"Saldo_Inicial\": 10,\n            \"NumeroCuenta\": \"8001\",\n            \"Cliente\": \"pepe pepe\",\n            \"Estado\": true\n        },\n        {\n            \"Tipo\": \"AHORROS\",\n            \"Fecha\": \"2025-03-09T16:57:17.788076\",\n            \"Movimiento\": 12,\n            \"Saldo_Disponible\": 16,\n            \"Saldo_Inicial\": 12,\n            \"NumeroCuenta\": \"8001\",\n            \"Cliente\": \"pepe pepe\",\n            \"Estado\": true\n        },\n        {\n            \"Tipo\": \"AHORROS\",\n            \"Fecha\": \"2025-03-09T16:57:24.889895\",\n            \"Movimiento\": -8,\n            \"Saldo_Disponible\": 16,\n            \"Saldo_Inicial\": 24,\n            \"NumeroCuenta\": \"8001\",\n            \"Cliente\": \"pepe pepe\",\n            \"Estado\": true\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Movement By id and Range Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/movimientos/reporte/2/2025-03-08/2025-03-09",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos",
+								"reporte",
+								"2",
+								"2025-03-08",
+								"2025-03-09"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find By Date",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/movimientos/1/2025-03-08",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"movimientos",
+										"1",
+										"2025-03-08"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Mar 2025 16:57:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Movements retrieved successfully\",\n    \"code\": \"000\",\n    \"httpStatus\": 200,\n    \"data\": [\n        {\n            \"Tipo\": \"AHORROS\",\n            \"Fecha\": \"2025-03-09T16:56:53.701122\",\n            \"Movimiento\": 2,\n            \"Saldo_Disponible\": 16,\n            \"Saldo_Inicial\": 10,\n            \"NumeroCuenta\": \"8001\",\n            \"Cliente\": \"pepe pepe\",\n            \"Estado\": true\n        },\n        {\n            \"Tipo\": \"AHORROS\",\n            \"Fecha\": \"2025-03-09T16:57:17.788076\",\n            \"Movimiento\": 12,\n            \"Saldo_Disponible\": 16,\n            \"Saldo_Inicial\": 12,\n            \"NumeroCuenta\": \"8001\",\n            \"Cliente\": \"pepe pepe\",\n            \"Estado\": true\n        },\n        {\n            \"Tipo\": \"AHORROS\",\n            \"Fecha\": \"2025-03-09T16:57:24.889895\",\n            \"Movimiento\": -8,\n            \"Saldo_Disponible\": 16,\n            \"Saldo_Inicial\": 24,\n            \"NumeroCuenta\": \"8001\",\n            \"Cliente\": \"pepe pepe\",\n            \"Estado\": true\n        }\n    ]\n}"
+						},
+						{
+							"name": "Movement By id and Range Date",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/movimientos/reporte/2/2025-03-08/2025-03-09",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"movimientos",
+										"reporte",
+										"2",
+										"2025-03-08",
+										"2025-03-09"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Mar 2025 17:32:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Movements retrieved successfully\",\n    \"code\": \"000\",\n    \"httpStatus\": 200,\n    \"data\": [\n        {\n            \"Tipo\": \"AHORROS\",\n            \"Fecha\": \"2025-03-09T12:32:14.922584\",\n            \"Movimiento\": 90,\n            \"Saldo_Disponible\": 150,\n            \"Saldo_Inicial\": 10,\n            \"NumeroCuenta\": \"8004\",\n            \"Cliente\": \"pepe pepe\",\n            \"Estado\": true\n        },\n        {\n            \"Tipo\": \"AHORROS\",\n            \"Fecha\": \"2025-03-09T12:32:16.220778\",\n            \"Movimiento\": 90,\n            \"Saldo_Disponible\": 150,\n            \"Saldo_Inicial\": 100,\n            \"NumeroCuenta\": \"8004\",\n            \"Cliente\": \"pepe pepe\",\n            \"Estado\": true\n        },\n        {\n            \"Tipo\": \"AHORROS\",\n            \"Fecha\": \"2025-03-09T12:32:22.942856\",\n            \"Movimiento\": -40,\n            \"Saldo_Disponible\": 150,\n            \"Saldo_Inicial\": 190,\n            \"NumeroCuenta\": \"8004\",\n            \"Cliente\": \"pepe pepe\",\n            \"Estado\": true\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Movement Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_cuenta\": 2,\r\n  \"descripcion\": \"pago\",\r\n  \"monto\": -40\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Account not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id_cuenta\": 2,\r\n  \"descripcion\": \"cobro\",\r\n  \"monto\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/movimientos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"movimientos"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Mar 2025 16:56:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Account not found\",\n    \"code\": \"001\",\n    \"httpStatus\": 404\n}"
+						},
+						{
+							"name": "Save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id_cuenta\": 1,\r\n  \"descripcion\": \"cobro\",\r\n  \"monto\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/movimientos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"movimientos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Mar 2025 16:56:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Movement saved successfully\",\n    \"code\": \"000\",\n    \"httpStatus\": 200,\n    \"data\": {\n        \"descripcion\": \"cobro\",\n        \"monto\": 2,\n        \"id_cuenta\": 1\n    }\n}"
+						},
+						{
+							"name": "Balance negative",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id_cuenta\": 1,\r\n  \"descripcion\": \"pago\",\r\n  \"monto\": -800\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/movimientos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"movimientos"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Mar 2025 16:57:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Insufficient balance\",\n    \"code\": \"Failed\",\n    \"httpStatus\": 500,\n    \"data\": {\n        \"descripcion\": \"pago\",\n        \"monto\": -800,\n        \"id_cuenta\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Account all by Client id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/cuentas/cliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas",
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find By id client",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/cuentas/cliente/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"cuentas",
+										"cliente",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Mar 2025 16:56:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Accounts retrieved successfully\",\n    \"code\": \"000\",\n    \"httpStatus\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"monto\": 10,\n            \"estado\": true,\n            \"cliente_id\": 1,\n            \"numero_cuenta\": \"8001\",\n            \"tipo_cuenta\": \"AHORROS\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Account Find By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/cuentas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/cuentas/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"cuentas",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Mar 2025 16:56:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Account retrieved successfully\",\n    \"code\": \"000\",\n    \"httpStatus\": 200,\n    \"data\": {\n        \"id\": 1,\n        \"monto\": 10,\n        \"estado\": true,\n        \"cliente_id\": 1,\n        \"numero_cuenta\": \"8001\",\n        \"tipo_cuenta\": \"AHORROS\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Account Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cliente_id\": 1,\r\n  \"numero_cuenta\": 8004,\r\n  \"tipo_cuenta\": \"AHORROS\",\r\n  \"monto\": 10.0,\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cliente_id\": 1,\r\n  \"numero_cuenta\": 8001,\r\n  \"tipo_cuenta\": \"AHORROS\",\r\n  \"monto\": 10.0,\r\n  \"estado\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/cuentas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"cuentas"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Mar 2025 16:55:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Account saved successfully\",\n    \"code\": \"000\",\n    \"httpStatus\": 201,\n    \"data\": {\n        \"id\": 1,\n        \"monto\": 10,\n        \"estado\": true,\n        \"cliente_id\": 1,\n        \"numero_cuenta\": \"8001\",\n        \"tipo_cuenta\": \"AHORROS\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "microservice-client",
+			"item": [
+				{
+					"name": "Client Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombres\": \"Fernando Cusco\",\r\n  \"genero\": \"hombre\",\r\n  \"edad\":29,\r\n  \"identificacion\": \"010101010x1\",\r\n  \"direccion\": \"Llacao\",\r\n  \"telefono\": \"09999\",\r\n  \"contrasena\": \"111111\",\r\n  \"cliente_id\": 2,\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombres\": \"jose jose\",\r\n  \"genero\": \"hombre\",\r\n  \"edad\":29,\r\n  \"identificacion\": \"010101010x1\",\r\n  \"direccion\": \"Llacao\",\r\n  \"telefono\": \"09999\",\r\n  \"contrasena\": \"111111\",\r\n  \"cliente_id\": 1,\r\n  \"estado\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Mar 2025 16:54:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Client saved successfully\",\n    \"code\": \"000\",\n    \"httpStatus\": 201,\n    \"data\": {\n        \"id_client\": 1,\n        \"nombres\": \"jose jose\",\n        \"genero\": \"hombre\",\n        \"edad\": 29,\n        \"identificacion\": \"010101010x1\",\n        \"direccion\": \"Llacao\",\n        \"telefono\": \"09999\",\n        \"cliente_id\": 1,\n        \"contrasena\": \"111111\",\n        \"estado\": true\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Client Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombres\": \"pepe pepe\",\r\n  \"genero\": \"hombre\",\r\n  \"edad\":29,\r\n  \"identificacion\": \"0101010101x\",\r\n  \"direccion\": \"Llacao\",\r\n  \"telefono\": \"09999\",\r\n  \"contrasena\": \"111111xx\",\r\n  \"estado\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombres\": \"pepe pepe\",\r\n  \"genero\": \"hombre\",\r\n  \"edad\":29,\r\n  \"identificacion\": \"0101010101x\",\r\n  \"direccion\": \"Llacao\",\r\n  \"telefono\": \"09999\",\r\n  \"contrasena\": \"111111xx\",\r\n  \"estado\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/clientes/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Mar 2025 16:54:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Client updated successfully\",\n    \"code\": \"000\",\n    \"httpStatus\": 200,\n    \"data\": {\n        \"nombres\": \"pepe pepe\",\n        \"genero\": \"hombre\",\n        \"edad\": 29,\n        \"identificacion\": \"0101010101x\",\n        \"direccion\": \"Llacao\",\n        \"telefono\": \"09999\",\n        \"contrasena\": \"111111xx\",\n        \"estado\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Client Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Client List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All client",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Mar 2025 16:55:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Clients retrieved successfully\",\n    \"code\": \"000\",\n    \"httpStatus\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"pepe pepe\",\n            \"gender\": \"hombre\",\n            \"age\": 29,\n            \"identification\": \"0101010101x\",\n            \"address\": \"Llacao\",\n            \"phone\": \"09999\",\n            \"clientId\": 1,\n            \"password\": \"111111xx\",\n            \"status\": false\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Client Find By id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/clientes/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Mar 2025 16:55:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Client retrieved successfully\",\n    \"code\": \"000\",\n    \"httpStatus\": 200,\n    \"data\": {\n        \"id_person\": 1,\n        \"id_client\": 1,\n        \"nombres\": \"pepe pepe\",\n        \"genero\": \"hombre\",\n        \"edad\": 29,\n        \"identificacion\": \"0101010101x\",\n        \"direccion\": \"Llacao\",\n        \"telefono\": \"09999\",\n        \"cliente_id\": 1,\n        \"contrasena\": \"111111xx\",\n        \"estado\": false\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
