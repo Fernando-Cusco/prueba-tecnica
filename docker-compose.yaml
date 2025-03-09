@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+  dbpostgres:
+    image: postgres:13
+    container_name: dbpostgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+  microservice-client:
+    build: ./microservice-client
+    container_name: microservice-client
+    restart: always
+    depends_on:
+      - dbpostgres
+      - kafka
+    ports:
+      - "8080:8080"
+  microservice-account:
+    build: ./microservice-account
+    container_name: microservice-account
+    restart: always
+    depends_on:
+      - microservice-client
+      - dbpostgres
+      - kafka
+    ports:
+      - "8081:8081"
+  kafka:
+    image: apache/kafka
+    container_name: kafka
+    restart: always
+    ports:
+      - "9092:9092"
